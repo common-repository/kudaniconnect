@@ -1,0 +1,26 @@
+Updatind docs
+https://developer.wordpress.org/plugins/wordpress-org/how-to-use-subversion/
+https://thewpx.com/wordpress-svn-repository/
+
+Svn CLI
+if starting from scratch download the SVN files with
+
+svn co https://plugins.svn.wordpress.org/kudaniconnect/
+
+Version numbers ant tags(see below) must be updated in the main php file and in readme 
+Updates go in the trunk folder , if new files were added then must be added to svn with
+
+svn add trunk/*
+
+you need to create a new folder under tags and put a version there of the plugin too then to add this new tag folder you do something like.use corrrect folder name, readme mentions the tag number too
+
+svn add tags/6.3 
+
+To check status
+svn stat
+
+to commit changes to the svn server
+svn --username=page12000 ci -m "Add version in tags"
+Yes, commit also pushes to server
+
+Done, no need to ask for WP to manually review.
